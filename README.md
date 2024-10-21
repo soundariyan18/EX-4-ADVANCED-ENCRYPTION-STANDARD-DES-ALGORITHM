@@ -1,9 +1,11 @@
 <h1>EX.7 Implement DES Encryption and Decryption<h1/>
 
-##AIM:
+## AIM:
+
 Implementation of Pseudorandom Number Generation Using Standard library.
 
 ##ALGORITHM:
+
 1.Get the input and convert it as block cipher.
 2.The plain text is initially permuted and split into 2 equal halves.
 3.It undergoes 16 rounds of encryption.
@@ -11,6 +13,7 @@ Implementation of Pseudorandom Number Generation Using Standard library.
 5.The same happens in decryption process but in an inverse manner.
 
 ##PROGRAM:
+
 ```c#
 #include <stdio.h>
 #include <string.h>
@@ -79,8 +82,10 @@ int main() {
 
 
 ##OUTPUT:
+
 ![Screenshot 2024-10-21 093339](https://github.com/user-attachments/assets/91e974a0-9d96-48d9-b5bd-bc101d271d68)
 
 
 ##RESULT:
-	Hence, for the given input text and key the DES algorithm is successfully simulated.
+
+Hence, for the given input text and key the DES algorithm is successfully simulated.
