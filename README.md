@@ -1,24 +1,16 @@
-<h1>EX.7 Implement DES Encryption and Decryption<h1/>
+# EX-7 IMPLEMENT DES ENCRYPTION AND DECRYPTION
 
-## AIM:
+## Aim:
+  To use Advanced Encryption Standard (AES) Algorithm for a practical application like URL Encryption.
 
-Implementation of Pseudorandom Number Generation Using Standard library.
+## ALGORITHM: 
+  1. AES is based on a design principle known as a substitution–permutation. 
+  2. AES does not use a Feistel network like DES, it uses variant of Rijndael. 
+  3. It has a fixed block size of 128 bits, and a key size of 128, 192, or 256 bits. 
+  4. AES operates on a 4 × 4 column-major order array of bytes, termed the state
 
-<h2>ALGORITHM:<h2/>
-
-1.Get the input and convert it as block cipher.
-
-2.The plain text is initially permuted and split into 2 equal halves.
-
-3.It undergoes 16 rounds of encryption.
-
-4.These 2 halves are finally rejoined to give cipher text.
-
-5.The same happens in decryption process but in an inverse manner.
-
-<h2>PROGRAM:<h2/>
-
-```c#
+## PROGRAM: 
+```
 #include <stdio.h>
 #include <string.h>
 
@@ -83,13 +75,10 @@ int main() {
     return 0;
 }
 ```
+## OUTPUT:
+![Screenshot 2024-10-21 093339](https://github.com/user-attachments/assets/440c4884-1075-4b8f-ac49-c1a28992dfb0)
 
 
-<h2>OUTPUT:<h2/>
 
-![Screenshot 2024-10-21 093339](https://github.com/user-attachments/assets/91e974a0-9d96-48d9-b5bd-bc101d271d68)
-
-
-<h2>RESULT:<h2/>
-
+## RESULT: 
 Hence, for the given input text and key the DES algorithm is successfully simulated.
