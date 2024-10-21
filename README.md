@@ -4,7 +4,7 @@
 
 Implementation of Pseudorandom Number Generation Using Standard library.
 
-##ALGORITHM:
+<h2>ALGORITHM:<h2/>
 
 1.Get the input and convert it as block cipher.
 2.The plain text is initially permuted and split into 2 equal halves.
