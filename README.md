@@ -12,7 +12,7 @@ Implementation of Pseudorandom Number Generation Using Standard library.
 4.These 2 halves are finally rejoined to give cipher text.
 5.The same happens in decryption process but in an inverse manner.
 
-##PROGRAM:
+<h2>PROGRAM:<h2/>
 
 ```c#
 #include <stdio.h>
@@ -81,11 +81,11 @@ int main() {
 ```
 
 
-##OUTPUT:
+<h2>OUTPUT:<h2/>
 
 ![Screenshot 2024-10-21 093339](https://github.com/user-attachments/assets/91e974a0-9d96-48d9-b5bd-bc101d271d68)
 
 
-##RESULT:
+<h2>RESULT:<h2/>
 
 Hence, for the given input text and key the DES algorithm is successfully simulated.
