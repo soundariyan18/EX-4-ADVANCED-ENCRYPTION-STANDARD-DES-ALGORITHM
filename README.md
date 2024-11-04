@@ -1,4 +1,4 @@
-# EX-7 IMPLEMENT DES ENCRYPTION AND DECRYPTION
+# EX-8-ADVANCED-ENCRYPTION-STANDARD-DES-ALGORITHM
 
 ## Aim:
   To use Advanced Encryption Standard (AES) Algorithm for a practical application like URL Encryption.
@@ -10,75 +10,40 @@
   4. AES operates on a 4 × 4 column-major order array of bytes, termed the state
 
 ## PROGRAM: 
-```
+```c
 #include <stdio.h>
 #include <string.h>
 
-// Function to perform a simple XOR-based encryption
-void encrypt(char *message, char *key, char *encryptedMessage, int messageLength) {
-    int keyLength = strlen(key);
+void xor_encrypt_decrypt(char *input, char *key) {
+int input_len = strlen(input);
+int key_len = strlen(key);
 
-    for (int i = 0; i < messageLength; i++) {
-        // Encrypt by XORing message byte with key byte
-        encryptedMessage[i] = message[i] ^ key[i % keyLength];
-    }
-    encryptedMessage[messageLength] = '\0';  // Null-terminate the encrypted message
+for (int i = 0; i < input_len; i++) {
+    input[i] = input[i] ^ key[i % key_len];
 }
-
-// Function to perform decryption (XOR again with the same key)
-void decrypt(char *encryptedMessage, char *key, char *decryptedMessage, int messageLength) {
-    int keyLength = strlen(key);
-
-    for (int i = 0; i < messageLength; i++) {
-        // Decrypt by XORing encrypted byte with key byte
-        decryptedMessage[i] = encryptedMessage[i] ^ key[i % keyLength];
-    }
-    decryptedMessage[messageLength] = '\0';  // Null-terminate the decrypted message
 }
 
 int main() {
-    char message[100];
-    char key[100];
+    printf("\n\n\n\n      ***** ADVANCED-ENCRYPTION-STANDARD-DES-ALGORITHM *****\n\n\n");
     
-    printf("\n      *****Simulation of DES encryption and decryption*****\n\n");
-    // Get user input for the message
-    printf("Enter the message to encrypt: ");
-    fgets(message, sizeof(message), stdin);
-    message[strcspn(message, "\n")] = '\0';  // Remove newline character if present
+char url[] = "SOUNDARIYAN";
+char key[] = "secretkey"; 
 
-    // Get user input for the key
-    printf("Enter the encryption key: ");
-    fgets(key, sizeof(key), stdin);
-    key[strcspn(key, "\n")] = '\0';  // Remove newline character if present
+printf("Original text: %s\n", url);
 
-    int messageLength = strlen(message);
-    
-    // Buffers to hold encrypted and decrypted messages
-    char encryptedMessage[100];
-    char decryptedMessage[100];
-    
-    // Encrypt the message
-    encrypt(message, key, encryptedMessage, messageLength);
-    printf("Original Message: %s\n", message);
-    printf("Encrypted Message: ");
-    
-    // Print encrypted message in hex format
-    for (int i = 0; i < messageLength; i++) {
-        printf("%02X ", (unsigned char)encryptedMessage[i]);
-    }
-    printf("\n");
-    
-    // Decrypt the message
-    decrypt(encryptedMessage, key, decryptedMessage, messageLength);
-    printf("Decrypted Message: %s\n", decryptedMessage);
-    
-    return 0;
+xor_encrypt_decrypt(url, key);
+printf("Encrypted text: %s\n", url);
+
+xor_encrypt_decrypt(url, key);
+printf("Decrypted text: %s\n", url);
+
+return 0;
 }
+
 ```
 ## OUTPUT:
-![Screenshot 2024-10-21 093339](https://github.com/user-attachments/assets/440c4884-1075-4b8f-ac49-c1a28992dfb0)
-
+![Screenshot 2024-11-04 083451](https://github.com/user-attachments/assets/7d1b45da-cfb6-48f1-86f0-e0bfdc4ff5f9)
 
 
 ## RESULT: 
-Hence, for the given input text and key the DES algorithm is successfully simulated.
+The execution program is successfully executed.
